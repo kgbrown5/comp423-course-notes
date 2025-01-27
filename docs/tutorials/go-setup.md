@@ -5,7 +5,9 @@
 
 ## Introduction
 
-In this tutorial, you will set up a new development container using the language Go and learn how to make a simple starter program! You do not need to know anything about Go to complete this tutorial. In fact, you don't even need Go installed on your host computer. The dev container will handle dependencies for you.
+In this tutorial, you will set up a new development environment using the language Go and learn how to make a simple starter program! You do not need to know anything about Go to complete this tutorial. In fact, you don't even need Go installed on your host computer. 
+
+Instead, we will be using a Dev Container running Go. Dev Containers create a stable development environment, especially when you're using a new programming language, by making sure all collaborators have the same language version and extensions installed.The dev container will handle dependencies for you.
 
 ## Prerequisites
 
@@ -64,6 +66,9 @@ git remote add origin https://github.com/your-username/comp423-ex00-go-tutorial.
 ``` bash
 git push --set-upstream origin main
 ```
+
+!!! warning
+    Make sure your default branch is named `main` using the subcommand `git branch`. Older versions of `git` name the default branch `master`. If this is the case, you can rename it to `main` by running the command `git branch -M main`.
 
 ## Part 2: Configuring the Dev Container
 
@@ -129,7 +134,7 @@ import "fmt"
 
 This establishes that you are in the `main` package, and that you are importing the `fmt` package.
 
-!!! note
+!!! note "fmt"
     `fmt` is a popular Go library that focuses on text formatting
 
 5. Now you get to write your first function! Add this code to your file:
@@ -138,7 +143,8 @@ func main() {
     fmt.Println("Hello COMP423!")
 }
 ```
-We name our function `main` (instead of anything else) because in Go a `main` function will automatically execute when you run the `main` package.
+!!! note "main"
+  We name our function `main` (instead of anything else) because in Go a `main` function will automatically execute when you run the `main` package.
 
 6. You can then execute your file by either using the `run` command:
 ``` bash
@@ -154,8 +160,10 @@ Try it out! You should now see `Hello COMP423!` printed in your terminal.
 
 Even though they produce the same output, these commands have very different functionalities. `run` serves as a shortcut while developing to compile and execute your code in one quick step, while `build` compiles the full program (including packages) and creates an executable file that can then be sent elsewhere.
 
-Running `build` is comparable to running `gcc -o hello hello.c`, which you used in COMP211! This is because they both compile your program and create an executable, but they don't run it.
+Running `build` is comparable to running `gcc -o hello hello.c`, which you used in COMP211! This is because they both compile your program and create an executable, but they don't run it. Instead you have to run the executable `./hello` separately.
 
 ## Congrats!
 
 You have successfully set up a Go Dev Container, created a new Go project, and compiled and ran the program it to test it out!
+
+Referenced [MkDocs Tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/) by Kris Jordan
