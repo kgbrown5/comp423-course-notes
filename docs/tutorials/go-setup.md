@@ -144,7 +144,7 @@ func main() {
 }
 ```
 !!! note "main"
-  We name our function `main` (instead of anything else) because in Go a `main` function will automatically execute when you run the `main` package.
+    We name our function `main` (instead of anything else) because in Go a `main` function will automatically execute when you run the `main` package.
 
 6. You can then execute your file by either using the `run` command:
 ``` bash
